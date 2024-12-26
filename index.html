@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header .actions {
+            display: flex;
+            gap: 15px;
+        }
+        .header .actions a {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .cover-photo {
+            background-color: #ccc;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+        .profile-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+        }
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-details h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .profile-details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .profile-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .profile-buttons a {
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .profile-buttons .follow {
+    background-color: #1877f2;
+    width: 100px; /* Adjust the width as needed */
+}
+
+.profile-buttons .message {
+    background-color: #42b72a;
+    width: 100px; /* Adjust the width as needed */
+}
+        .tabs {
+            display: flex;
+            background-color: #ffffff;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabs a {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+        .tabs a.active {
+            font-weight: bold;
+            color: #1877f2;
+            border-bottom: 2px solid #1877f2;
+        }
+        .content {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="page-name">মোজাহের ভাই</h1>
+        <div class="actions">
+            <a href="#">Message Us</a>
+            <a href="#">🔍</a>
+        </div>
+    </div>
+    <div class="cover-photo" id="cover-photo"></div>
+    <div class="profile-section">
+        <img src="https://via.placeholder.com/80" id="profile-photo" class="profile-photo" alt="Profile Picture">
+        <div class="profile-details">
+            <h2 id="page-name-info">মোজাহের ভাই</h2>
+            <p>2M followers • 0 following</p>
+            <div class="profile-buttons">
+                <a href="#" class="follow">Follow</a>
+                <a href="#" class="message">Message</a>
+            </div>
+        </div>
+    </div>
+    <div class="tabs">
+        <a href="#" class="active">Posts</a>
+        <a href="#">About</a>
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Reels</a>
+    </div>
+    <div class="content">
+        <p>Dynamic content appears here...</p>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the URL parameters for profile, cover, and name
+        const profileUrl = getUrlParameter('profile');
+        const coverUrl = getUrlParameter('cover');
+        const pageName = getUrlParameter('name');
+
+        // Update profile photo
+        if (profileUrl) {
+            document.getElementById('profile-photo').src = profileUrl;
+        }
+
+        // Update cover photo
+        if (coverUrl) {
+            document.getElementById('cover-photo').style.backgroundImage = `url(${coverUrl})`;
+        }
+
+        // Update page name
+        if (pageName) {
+            document.getElementById('page-name').innerText = pageName;
+            document.getElementById('page-name-info').innerText = pageName;
+        }
+    </script>
+</body>
+</html>
+
+This code is perfect
+Just add a variable link in J's and add it every hyper button instead of # open the same link getting the value from my J's variable link
