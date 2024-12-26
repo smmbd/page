@@ -245,7 +245,7 @@
 
         // Load random images
         function loadPosts() {
-            fetch('https://picsum.photos/v2/list?page=1&limit=20')
+            fetch('https://picsum.photos/v2/list?page=2&limit=8')
                 .then(response => response.json())
                 .then(data => {
                     data.forEach(item => createPost(item.download_url));
